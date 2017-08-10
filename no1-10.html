@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title>About</title>
+ <head>
+   <head>
 <style>
 div.container {
     width: 100%;
-    border: 1px solid white;
+    border: 0px solid white;
 }
 header, footer {
     padding: 1em;
@@ -27,7 +29,12 @@ nav ul {
 nav ul a {
     text-decoration: none;
 }
-    
+</style>
+</head>
+<body>
+
+<div class="container">
+
 <header>
    <div align="left">
    <h1><style>
@@ -75,7 +82,29 @@ nav ul a {
     <a href="https://ASLGirlsWhoCode.github.io/ASL/about.html">About</a>
   </div>
 </div>
-    
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script> <div align="center">Logo</h1>
+</header>
+  
 article {
     margin-left: 100px;
     border-left: 1px solid gray;
