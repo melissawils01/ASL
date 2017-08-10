@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title>About</title>
+ <head>
+   <head>
 <style>
 div.container {
     width: 100%;
-    border: 1px solid white;
+    border: 0px solid white;
 }
-
 header, footer {
     padding: 1em;
     color: DimGray;
@@ -14,14 +15,12 @@ header, footer {
     clear: left;
     text-align: center;
 }
-
 nav {
     float: left;
     max-width: 160px;
     margin: 0;
     padding: 1em;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -30,13 +29,6 @@ nav ul {
 nav ul a {
     text-decoration: none;
 }
-
-article {
-    margin-left: 100px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-}
 </style>
 </head>
 <body>
@@ -44,18 +36,76 @@ article {
 <div class="container">
 
 <header>
-   <h1>LOGO</h1>
+   <div align="left">
+   <h1><style>
+.dropbtn {
+    background-color: #D1FFEB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #B9D6C9;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {background-color: #f1f1f1}
+.show {display:block;}
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn"> <img src="menu-bars.png" alt="Menu" style="width:15px;height:25px;"> </button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://ASLGirlsWhoCode.github.io/ASL/home.html">Home</a>
+    <a href="https://ASLGirlsWhoCode.github.io/ASL/level.html">Lessons</a>
+    <a href="https://ASLGirlsWhoCode.github.io/ASL/about.html">About</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script> <div align="center">Logo</h1>
 </header>
   
-<nav>
-  <ul>
-    <li><a href="https://ASLGirlsWhoCode.github.io/ASL/home.html">Home</a></li>
-    <li><a href="https://ASLGirlsWhoCode.github.io/ASL/level.html">Categories</a></li>
-      <li><a href = "https://ASLGirlsWhoCode.github.io/ASL/abcs.html"> -   ABC's</a></li>
-      <li><a href = "https://ASLGirlsWhoCode.github.io/ASL/no1-10.html">  -   Numbers 1-10</a></li>
-    <li><a href="https://ASLGirlsWhoCode.github.io/ASL/about.html">About</a></li>
-  </ul>
-</nav>
+
 
 <article>
   <h1>London</h1>
